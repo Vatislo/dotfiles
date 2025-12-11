@@ -1,0 +1,66 @@
+{
+	"height": 30,
+	"width": 1680,
+	"spacing": 36,
+	"reload_style_on_change": true,
+	"position": "top",
+	"output": "DVI-D-1", 
+	"margin-bottom": 0,
+
+	"modules-left": ["hyprland/workspaces","hyprland/window"],
+	"modules-center": [],
+	"modules-right": ["tray","cpu", "memory","hyprland/language","pulseaudio","clock"],
+
+	"pulseaudio": {
+		"scroll-step": 5,
+				"format": "{icon}  {volume}%",
+				"format-icons": {
+					"default": [" ", " ", " "]
+				},
+				"on-click": "pavucontrol"
+		
+	},
+	"hyprland/language": {
+		"format-en": "EN",
+		"format-ru": "RU",
+	},
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": false,
+		
+	},
+	"clock": {
+	   "interval": 1,
+	   "format": "{:%H:%M:%S   %d-%m-%y}",
+	},
+
+	"cpu": {
+		"interval": 1,	
+		"format": "  {usage}%",
+	},
+
+	"memory": {
+			"interval": 1,
+			"format": "  {}%",
+			"tooltip": false
+		},
+	
+
+
+	"hyprland/workspaces": {
+		// "width": 1000px;
+		"warp-on-scroll": true,
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+		},
+		   "persistent-workspaces": {"*": 5 }
+		}
+	},
+	
+}
